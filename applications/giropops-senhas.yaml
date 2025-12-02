@@ -15,3 +15,5 @@ spec:
     namespace: giropops-senhas # A application fica no namespace argocd, mas os recursos dela serão criados no namespace giropops-senhas
   syncPolicy:
     automated: {}
+    syncOptions:
+      - CreateNamespace=true # Cria o namespace giropops-senhas caso ele não exista
